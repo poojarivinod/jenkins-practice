@@ -25,6 +25,7 @@ pipeline {
                 script{
                     sh """
                         echo "Hello, this is deploy"
+                        abcd
                     """
                 }
             }
@@ -42,3 +43,4 @@ pipeline {
             echo 'I will run when pipeline is success'
         }
     }    
+}
