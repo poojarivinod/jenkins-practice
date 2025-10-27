@@ -16,6 +16,7 @@ pipeline {
                     sh """
                         echo "Hello, this is test"
                     """
+                }
             }
         }
         stage('Deploy') {
@@ -24,6 +25,7 @@ pipeline {
                     sh """
                         echo "Hello, this is deploy"
                     """
+                }
             }
         }
     }
