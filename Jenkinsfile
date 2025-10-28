@@ -1,12 +1,18 @@
 // In google search as jenkins pipeline syntax --> pipeline syntax(jenkins) --> click on pipeline --> copy the code below this Declarative Pipeline fundamentals 
 pipeline {
     agent { label 'AGENT-1' }
+    environment { 
+        PROJECT = 'EXPENSE'
+        COMPONENT = 'BACKEND' 
+        DEPLOY_TO = 'production'
+    }
     stages {
         stage('Build') {
             steps {
                 script{
                     sh """
                         echo "Hello, this is build"
+                        echo "project: $PROJECT"
                     """
                 }
             }
@@ -24,8 +30,7 @@ pipeline {
             steps {
                 script{
                     sh """
-                        echo "Hello, this is deploy"
-                        abcd
+                        echo "Hello, this is deploy" 
                     """
                 }
             }
