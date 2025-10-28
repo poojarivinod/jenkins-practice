@@ -23,7 +23,7 @@ pipeline {
             steps {
                 script{
                     sh """
-                        echo "Hello, this is build"
+                        echo "Hello, this is build 1"
                         echo "project: $PROJECT"
                         # sleep 15
                         echo "Hello ${params.PERSON}"
