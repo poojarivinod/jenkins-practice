@@ -66,7 +66,6 @@ pipeline {
                 }
             }
         }
-    }
         stage('Parallel Stage') {
             parallel {
                 stage('STAGE-1') {
@@ -90,6 +89,7 @@ pipeline {
                     }
                 }    
             }
+        }    
     }    
     //In google search as jenkins pipeline syntax --> pipeline syntax(jenkins) --> post
     post { 
