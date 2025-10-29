@@ -67,29 +67,29 @@ pipeline {
             }
         }
     }
-    stage('Parallel Stage') {
-        parallel {
-            stage('STAGE-1') {
-                steps {
-                    script{
-                        sh """
-                            echo "Hello, this is STAGE-1"
-                            sleep 15
-                        """
+        stage('Parallel Stage') {
+            parallel {
+                stage('STAGE-1') {
+                    steps {
+                        script{
+                            sh """
+                                echo "Hello, this is STAGE-1"
+                                sleep 15
+                            """
+                        }
                     }
                 }
+                stage('STAGE-2') {
+                    steps {
+                        script{
+                            sh """
+                                echo "Hello, this is STAGE-2"
+                                sleep 15
+                            """
+                        }
+                    }
+                }    
             }
-            stage('STAGE-2') {
-                 steps {
-                    script{
-                        sh """
-                            echo "Hello, this is STAGE-2"
-                            sleep 15
-                        """
-                    }
-                }
-            }    
-        }
     }    
     //In google search as jenkins pipeline syntax --> pipeline syntax(jenkins) --> post
     post { 
