@@ -79,18 +79,17 @@ pipeline {
                     }
                 }
             }
-        }
             stage('STAGE-2') {
-                steps {
+                 steps {
                     script{
                         sh """
                             echo "Hello, this is STAGE-2"
                             sleep 15
-                        """   
+                        """
                     }
-                }    
-            }
-        }    
+                }
+            }    
+        }
     }    
     //In google search as jenkins pipeline syntax --> pipeline syntax(jenkins) --> post
     post { 
